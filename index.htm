@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente los acentos
+     y caracteres especiales como la letra ñ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Ajusta el área de visualización al ancho de la pantalla-->
+    <title>Pagína de Keren</title>
+
+    <!--Resume el contenido de la pàgina, Google puede usarlo 
+     en sus resultados de busqueda-->
+     <meta name="description"
+     content="Pàgina de Keren, donde comparto mis gustos por la programaciòn
+    y mis pasatiemps.">
+
+    <!--name="keywords" ayuda a los metores de busqueda a identificar
+     el contenido de la pàgina-->
+    <meta name="keyword"
+    content="Keren, programaciòn,música,dormir,visitar museos,deporte">
+
+    <!-- name="author" indica el autor de la pàgina-->
+    <meta name="author" content="Keren Sinai Martínez Algara">
+
+    <!--Aviso de contenido propio-->
+    <meta name="copyright" content="© 2026 Keren Sinai Martínez Algara.Todos los derechos reservados">
+
+
+
+     <!-- ACTIVIDAD 3. Cargamos el CSS de Bootstrap desde Internet. -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!--Conectamos nuestro CSS, debe coincidir en la misma carpeta HTML--> 
+     <link real="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+     <div class="container my-4">
+
+    <!--Contenido de la pagina, titulo principal de la pagina-->
+     <!-- style aplica un estillo CSS y color del encabezado -->
+    <h1 id="inicio"> Bienvenido a la pagina de Keren</h1>
+    <!--Este es un parrafo de ejemplo -->
+    <p>Esta es una simple página web creada con HTML.</p>
+
+    <!-- --------------- ALERTA ---------------- -->
+     <div class="alert alert-info" role="alert">
+        ¡Bienvenido!Aquí comparto mis gustos por la programación,
+        el cine,la música y la natación.
+    </div>
+
+    <!-- --------------- BOTONES PARA NAVEGAR ---------------- -->
+     <!-- href idica la ruta del archivo al que se quiere navegar id= " pasatiempos"-->
+      <nav class="navbar" navbar-expand-lg bg-ligth mb-4
+      arial-label="Secciones de la página">
+      <div class="container-fluid">
+        <!--href=#inicio lleva al el elemento con id="inicio"-->
+        <a class="navbar-brand" href="#inicio"> Página de Keren</a>
+
+        <!--#menu debe coincidir con el id menu-->
+        <button class="navbar-toggler" 
+         type="button"
+         data-bs-toggle="collapse" 
+         data-bs-target="#menu"
+         aria-controls="menu"
+         aria-expanded="false" 
+         aria-label="Abrir o cerrar menú">
+         <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav gap-2">
+                <a href="#pasatiempos" class="btn btn-primary">
+                    Mis pasatiempos
+                </a>
+                <a href="#comidas" class="btn btn-success mb-2">
+                    Mis comidas favoritas
+        </a>
+        <a href="#planes" class="btn btn-warning mb-2">
+            Mis planes para desconectarme
+        </a>
+      </nav>
+
+       <!-- --------------- PRESENTACIÓN ---------------- -->
+    <!-- H2 sirve para crear un subtitulo -->
+    <h2>Me gusta mucho ver series </h2>
+    <!--H3  se puede organizar un subtema dentro de H2-->
+    <h3>De comer me gusta mucho los chilaquiles</h3>
+    <!-- H4 se utiliza para subdividir aún mas el contenido 
+     en detalles menores -->
+    <h4>Me gusta el cine y quiero ver la pelicula Doomsday</h4>
+    <!--H5 se usa para agregar detalles adicionales 
+     o informacion especifica -->
+    <h5>Me gusta mucho la musica y mi genero favorito es el alt-pop</h5>
+    <!--H6 se utiliza para notas o detalles 
+     adicionales muy especificos -->
+    <h6>Mi  pasatiempo favorito es ver series,hacer deporte y dormir</h6>
+
+    <!-- ================ CARRUSEL ================ -->
+     <section class="mt-4">
+        <h2 class="text-primary">Mis gustos en imagenes</h2>
+        <!-- El carrusel crea el componente y slide agrega la transición
+         el id permite que las flechas enncuentren el carrucel -->
+         <div id="carrusel" class="carousel slide bg-dark">
+
+             <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                    src="IMG/Programación.png" 
+                     class="d-block w-100"
+                      alt="Imagen de programación">
+                      </div> 
+                      <div class="carousel-item">
+                        <img
+                    src="IMG/Cine.png"
+                    class="d-block w-100"
+                    alt="Imagen de cine">
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                        src="IMG/Trufas.png"
+                        class="d-block w-100"
+                        alt="Imagen de chocolates">
+                      </div>
+             </div>
+             <button class="carousel-control-prev"
+                      type="buttom"
+                      data-bs-target="#carrusel"
+                      data-bs-slide="prev"
+                      aria-label="Imagen Anterior">
+                      <span class="carousel-control-prev-icon"
+                      aria-hidden="true"></span>
+             </button>
+
+             <button  class="carousel-control-next"
+              type="button"
+              data-bs-target="#carrusel"
+              data-bs-slide="next"
+              aria-label="Imagen Siguiente">
+              <span class="carousel-control-next-icon"
+              aria-hidden="true"></span>
+             </button>
+         </div>
+        </section>
+
+
+
+
+     <!-- ============== TARJETAS ============== -->
+      <section class="mt-4">
+        <h2 class="text-primary"> Acerca de mis gustos</h2>
+        <!-- ---------- Tarjeta básica card crea el contenedor------------ -->
+          <div class="card mb-4">
+            <!-- card body crea el contenido de la tarjeta -->
+             <div class="card body">
+                <h5 class="card-title">Programación</h5>
+                <p class="card-text">Me gusta mucho la programación y aprender Cosas
+                    nuevas.</p>
+                    <!-- este enlace lleva a la tabla de mis planes --> 
+                     <a href="#planes" class="btn btn-primary">Conoce mis planes</a>
+             </div>
+          </div>
+          <!-- tarjeta con Imagen
+           Usamos la imagen de Stranger Things-->
+           <div class="card mb-4">
+
+
+
+            <!-- src es la ruta de la imagen, alt describe la imagen
+             width="300" le da un ancho de 300 pixeles a la imagen -->
+             <img src="https://lubieenserie.fr/wp-content/uploads/2025/12/stranger-things-fin-scaled.png"
+             alt="Imagen de Stranger Things" 
+             109 width="300" 
+             class="img-fluid">
+
+             <div class="card-body">
+                <h3 class="card-title">Cine</h3>  
+                <p class="card-text">Me gusta mucho el cine y quiero ver la serie de 
+                    Stranger Things. </p>   
+                    <a href="#planes" class="btn btn-secondary">Conoce mis planes</a> 
+                 </div>
+                </div>
+                <!-- tarjeta con Imagen 
+                 Usamos la imagen de natación-->
+                <div class="card mb-4"> 
+                    <img
+                    src="img/Natación.png"
+                    alt="Imagen de natación" 
+                    width="300"
+                    class="img-fluid">
+                     <div class="card-body">
+                        <h3 class="card-title">Natacion</h3>
+                         <p class="card-text">Me gusta nadar 
+                            y quiero participar en una competencia.</p>
+                            <a href="#pasatimepos" class="btn btn-success">Conoce mis pasatiempos</a>
+                     </div>
+                </div>
+
+
+
+              <!-- Tarjeta con Imagen 
+                Usamos la imagen de Belleza Verdadera-->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        El mejor kdrama del mundo
+                    </div>
+                    <img
+                    src="img/Belleza Verdadera.png"
+                    alt="Imagen de Belleza Verdadera" 
+                    width="300"
+                    class="img-fluid">
+                     <div class="card-body">
+                        <h3 class="card-title">Belleza Verdadera</h3>
+                         <p class="card-text">Me gusta mucho los Kdramas 
+                            y quiero volver a ver esta serie.</p>
+                            <a href="#pasatimepos" class="btn btn-success">Conoce mis pasatiempos</a>
+                     </div>
+                </div> 
+      </section>
+      
+
+      <br>
+      <img src="https://lubieenserie.fr/wp-content/uploads/2025/12/stranger-things-fin-scaled.png"
+    alt="Imagen de la serie de Stranger Things" width="300">
+    <img src="img/Natación.png"
+    alt="Imagen de Natación" width="300">
+    <img src="img/Belleza Verdadera.png" width="300">
+
+<!-- LISTA NO ORDENADA -->
+<section>
+    <h2>Cosas que hago en mi tiempo libre</h2>
+    <!-- ul crea una lista no ordenada, li crea un elemento de la lista-->
+    <ul>
+        <li>Ver series</li>
+        <li>Hacer deporte</li>
+        <li>Visitar museos</li>
+        <li>Dormir</li>
+    </ul>
+</section>
+
+<!-- LISTA ORDENADA -->
+ <section>
+    <h2>Mis comidas favoritas</h2>
+    <!--ol crea una lista ordenada, li crea un elemento de la lista-->
+    <ol>
+        <li>Tacos de arrachera</li>
+        <li>Chilaquiles</li>
+        <li>Spagueti</li>
+        <li>Ensalada</li>
+    </ol>
+</section>
+<!--Tabla-->
+<h2>Mis planes para desconectarme</h2>
+<table border="1">
+    <!--tr crea una fila de la tabla, th crea un encabezado de la tabla -->
+    <tr>
+        <th>Tiempo disponible</th>
+        <th>Planes</th>
+        <th>Qué necesito</th>
+    </tr>
+    <!--td crea una celda de la tabla-->
+    <tr>
+        <td>2 horas</td>
+        <td>Dormir</td>
+        <td>Mi cama</td>
+    </tr>
+    <tr>
+        <td>4 horas</td>
+        <td>Ver series</td>
+        <td>En la sala</td>
+    </tr>
+    <tr>
+        <td>1 hora</td>
+        <td>Hacer deporte</td>
+        <td>Alberca</td>
+    </tr>
+    <tr>
+        <td>2 horas</td>
+        <td>Visitar museos</td>
+        <td>Conocer la ubicación</td>
+    </tr>
+</table border="1" style="color:hotpink(255, 0, 0);">
+
+<!-- ACTIVIDAD 3. Cargamos el JavaScript de Bootstrap.
+         Se usa en componentes interactivos, como los menús desplegables. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
